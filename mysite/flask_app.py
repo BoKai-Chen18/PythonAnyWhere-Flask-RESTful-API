@@ -11,7 +11,7 @@ def home():
 @app.route('/weather', methods=['POST'])
 def weather_result():
     city = request.form['city']
-    url = f'https://api.openweathermap.org/data/2.5/weather?q={city}&units=metric&lang=zh_tw&appid={API_KEY}'
+    url = f'網站的API'
     response = requests.get(url)
     if response.status_code != 200:
         return render_template('result.html', error='查詢失敗，請確認城市名稱是否正確')
@@ -37,7 +37,7 @@ def weather_by_coords():
     lon = data.get('lon')
     if lat is None or lon is None:
         return jsonify({'error': '經緯度無效'})
-    url = f'https://api.openweathermap.org/data/2.5/weather?lat={lat}&lon={lon}&units=metric&lang=zh_tw&appid={API_KEY}'
+    url = f'網站的API'
     response = requests.get(url)
     if response.status_code != 200:
         return jsonify({'error': '查詢失敗'})
