@@ -1,0 +1,2 @@
+eb init -p python-3.8 flask-app
+eb create flask-env
