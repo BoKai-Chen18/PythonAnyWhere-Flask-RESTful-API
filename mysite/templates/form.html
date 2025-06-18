@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <title>天氣查詢首頁</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      margin: 50px;
+    }
+    form {
+      margin-bottom: 20px;
+    }
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+    }
+    .map-button {
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      cursor: pointer;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+  <h1>輸入城市名稱查詢天氣</h1>
+  <form action="/weather" method="POST">
+    <input type="text" name="city" placeholder="例如：Taipei" required>
+    <button type="submit">查詢天氣</button>
+  </form>
+
+  <!-- 地圖查天氣按鈕 -->
+  <a href="/map" class="map-button">🌍 使用地圖查天氣</a>
+</body>
+</html>
