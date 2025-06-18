@@ -2,11 +2,11 @@ from flask import Flask, request, jsonify, render_template
 import requests
 
 app = Flask(__name__)
-API_KEY = 'e31faa3d305297df13bb43aaff1deb1e'
+API_KEY = 'your APIKEY'
 
 @app.route('/')
 def home():
-    return render_template('form.html')  # 首頁仍為城市名稱輸入查詢
+    return render_template('form.html')
 
 @app.route('/weather', methods=['POST'])
 def weather_result():
@@ -28,7 +28,7 @@ def weather_result():
 
 @app.route('/map')
 def map_page():
-    return render_template('index.html')  # 地圖版天氣查詢
+    return render_template('index.html')
 
 @app.route('/weather_by_coords', methods=['POST'])
 def weather_by_coords():
